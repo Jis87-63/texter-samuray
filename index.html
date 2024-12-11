@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Moz Investimento</title>
+    <style>
+        /* Estilo do corpo */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(120deg, #0077b6, #00b4d8, #90e0ef);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Container do formulário */
+        .login-container {
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .login-container h1 {
+            color: #0077b6;
+            margin-bottom: 20px;
+        }
+
+        /* Input e botões */
+        .login-container input {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+            transition: 0.3s;
+        }
+
+        .login-container input:focus {
+            border-color: #0077b6;
+            outline: none;
+        }
+
+        .login-container button {
+            background: #0077b6;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            width: 100%;
+        }
+
+        .login-container button:hover {
+            background: #005f8a;
+        }
+
+        .login-container p {
+            margin-top: 15px;
+            color: #0077b6;
+        }
+
+        .login-container p a {
+            color: #00b4d8;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .login-container p a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Bem-vindo ao Moz Investimento</h1>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Usuário" required>
+            <input type="password" id="password" placeholder="Senha" required>
+            <button type="submit">Entrar</button>
+        </form>
+        <p>Esqueceu a senha? <a href="#">Recuperar</a></p>
+        <p>Não tem conta? <a href="#">Registre-se</a></p>
+    </div>
+
+    <script>
+        // Simulação de login
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (username === "admin" && password === "1234") {
+                alert("Login bem-sucedido!");
+            } else {
+                alert("Usuário ou senha inválidos!");
+            }
+        });
+    </script>
+</body>
+  </html>
